@@ -33,9 +33,40 @@ namespace ConsoleApp1
             }
             return num1 / num2;
         }
+        public static double Factorial(double num1)
+        {
+            double factorial = num1;
+            for (var i = num1 - 1; i > 1; i--)
+            {
+                factorial *= i;
+
+            }
+            return num1;
+        }
+        public static double SqrtX(double num1, double num2)
+        {
+            return Math.Pow(num1, 1 / num2);
+        }
+
+        public static double DegreeY(double num1, double num2)
+        {
+            return Math.Pow(num1, num2);
+        }
+
+        public static double Square(double num1)
+        {
+            return Math.Pow(num1, 2.0);
+        }
         public static double Sqrt(double num1)
         {
             return Math.Sqrt(num1);
+        }
+        public static double Stepen(double x, double y)
+        {
+            double temp = 1;
+            for (double i = 0; i < y; i++)
+                temp *= x;
+            return temp;
         }
 
         static public double NumInput()
@@ -55,7 +86,7 @@ namespace ConsoleApp1
         {
             mathOperator = Console.ReadLine();
             List<string> operatorsWithSecondArgument = new List<string> { "+", "-", "*", "/", "%", "^" };
-            List<string> operatorsWithOneArgument = new List<string> { "sqrt", "!" };
+            List<string> operatorsWithOneArgument = new List<string> { "sqrt", "!", "X", "Y", "E", "T"};
 
             while (true)
             {

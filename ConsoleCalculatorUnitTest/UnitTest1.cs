@@ -58,5 +58,68 @@ namespace ConsoleCalculatorUnitTest
             double actualResult = Calc.Divide(firstArgument, secondArgument);
             Assert.AreEqual(expectedResult, actualResult);
         }
+        [TestCase(5, 120)]
+        [TestCase(-4, -24)]
+        [TestCase(1, 1)]
+        [TestCase(0, 1)]
+        public void ExtractingTheRoot(double firstArgument, double expectedResult)
+        {
+            double actualResult = Calc.Sqrt(firstArgument);
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [TestCase(5, 120)]
+        [TestCase(-4, -24)]
+        [TestCase(1, 1)]
+        [TestCase(0, 1)]
+        public void Factorial(double firstArgument, double expectedResult)
+        {
+            double actualResult = Calc.Factorial(firstArgument);
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [TestCase(12, 2, 6)]
+        [TestCase(-10, 2, -5)]
+        [TestCase(4, 2, 2)]
+        [TestCase(0, 0, 0)]
+        public void Divde(double firstArgument, double secondArgument, double expectedResult)
+        {
+            double actualResult = Calc.SqrtX(firstArgument, secondArgument);
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [TestCase(12, 2, 6)]
+        [TestCase(-10, 2, -5)]
+        [TestCase(4, 2, 2)]
+        [TestCase(0, 0, 0)]
+        public void Dide(double firstArgument, double secondArgument, double expectedResult)
+        {
+            double actualResult = Calc.DegreeY(firstArgument, secondArgument);
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [TestCase(12, 2, 6)]
+        [TestCase(-10, 2, -5)]
+        [TestCase(4, 2, 2)]
+        [TestCase(0, 0, 0)]
+        public void Square(double firstArgument, double expectedResult)
+        {
+            double actualResult = Calc.Square(firstArgument);
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [TestCase(12, 2, 6)]
+        [TestCase(-10, 2, -5)]
+        [TestCase(4, 2, 2)]
+        [TestCase(0, 0, 0)]
+        public void Dirode(double firstArgument, double expectedResult)
+        {
+            double actualResult = Calc.Square(firstArgument);
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [TestCase(12, 2, 6)]
+        [TestCase(-10, 2, -5)]
+        [TestCase(4, 2, 2)]
+        [TestCase(0, 0, 0)]
+        public void Stepen(double firstArgument, double secondArgument, double expectedResult)
+        {
+            double actualResult = Calc.Stepen(firstArgument, secondArgument);
+            Assert.AreEqual(expectedResult, actualResult);
+        }
     }
 }

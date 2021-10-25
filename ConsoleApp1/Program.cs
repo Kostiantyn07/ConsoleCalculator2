@@ -50,7 +50,31 @@ namespace ConsoleApp1
 
                     result = Calc.RestOfDivide(firstOperand, secondOperand);
                     break;
+                case "!":
 
+                    result = Calc.Factorial(firstOperand);
+                    break;
+                case "X":
+
+                    result = Calc.SqrtX(firstOperand, secondOperand);
+                    break;
+                case "Y":
+
+                    result = Calc.DegreeY(firstOperand, secondOperand);
+                    break;
+                case "E":
+
+                    result = Calc.Square(firstOperand);
+                    break;
+                case "T":
+
+                    result = Calc.Sqrt(firstOperand);
+                    break;
+                    
+                case "K":
+
+                    result = Calc.(firstOperand, secondOperand);
+                    break;
                 default:
                     Console.WriteLine("No such opertor");
                     break;
