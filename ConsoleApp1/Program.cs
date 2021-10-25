@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +18,7 @@ namespace ConsoleApp1
             Console.WriteLine("Input operator (+ - * / %): ");
             bool isSecondNeed = Calc.OperatorInput(out string mathOperator);
             double secondOperand = 0;
+
             if (isSecondNeed = true)
             {
                 Console.WriteLine("Input second operand: ");
@@ -68,6 +69,7 @@ namespace ConsoleApp1
                     Console.WriteLine("No such opertor");
                     break;
             }
+
             Console.WriteLine($"Yoyr result is: {result}");
         }
     }
