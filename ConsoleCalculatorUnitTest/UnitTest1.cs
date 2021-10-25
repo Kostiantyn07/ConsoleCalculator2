@@ -59,8 +59,8 @@ namespace ConsoleCalculatorUnitTest
             Assert.AreEqual(expectedResult, actualResult);
         }
 
-        [TestCase(64, 8)]  // Корень
-        [TestCase(2, 15)] //try catch Отдельный метод, который проверяет отдельные значения(ловит ошибку, тест прошел)
+        [TestCase(64, 8)]  
+        [TestCase(36, 6)]  
         [TestCase(1, 1)]
         [TestCase(256, 16)]
         public void RootTest(double firstArgument, double expectedResult)
@@ -79,7 +79,7 @@ namespace ConsoleCalculatorUnitTest
             Assert.AreEqual(expectedResult, actualResult);
         }
        
-        [TestCase(2, 1, 2)]    //Степень
+        [TestCase(2, 1, 2)]   
         [TestCase(8, 3, 512)]
         [TestCase(3, 8, 6561)]
         [TestCase(1, 10, 1)]
