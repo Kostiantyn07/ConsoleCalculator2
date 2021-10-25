@@ -43,20 +43,8 @@ namespace ConsoleApp1
             }
             return num1;
         }
-        public static double SqrtX(double num1, double num2)
-        {
-            return Math.Pow(num1, 1 / num2);
-        }
 
-        public static double DegreeY(double num1, double num2)
-        {
-            return Math.Pow(num1, num2);
-        }
-
-        public static double Square(double num1)
-        {
-            return Math.Pow(num1, 2.0);
-        }
+        
         public static double Sqrt(double num1)
         {
             return Math.Sqrt(num1);
@@ -86,7 +74,7 @@ namespace ConsoleApp1
         {
             mathOperator = Console.ReadLine();
             List<string> operatorsWithSecondArgument = new List<string> { "+", "-", "*", "/", "%", "^" };
-            List<string> operatorsWithOneArgument = new List<string> { "sqrt", "!", "X", "Y", "E", "T"};
+            List<string> operatorsWithOneArgument = new List<string> { "sqrt", "!", "S"};
 
             while (true)
             {

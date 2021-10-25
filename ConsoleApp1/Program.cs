@@ -54,26 +54,15 @@ namespace ConsoleApp1
 
                     result = Calc.Factorial(firstOperand);
                     break;
-                case "X":
 
-                    result = Calc.SqrtX(firstOperand, secondOperand);
-                    break;
-                case "Y":
-
-                    result = Calc.DegreeY(firstOperand, secondOperand);
-                    break;
-                case "E":
-
-                    result = Calc.Square(firstOperand);
-                    break;
-                case "T":
+                case "sqrt":
 
                     result = Calc.Sqrt(firstOperand);
                     break;
                     
-                case "K":
+                case "S":
 
-                    result = Calc.(firstOperand, secondOperand);
+                    result = Calc.Stepen(firstOperand, secondOperand);
                     break;
                 default:
                     Console.WriteLine("No such opertor");
