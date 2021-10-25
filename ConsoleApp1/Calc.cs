@@ -36,12 +36,18 @@ namespace ConsoleApp1
         public static double Factorial(double num1)
         {
             double factorial = num1;
+
+            if (num1 == 0)
+            {
+                return 1;
+            }
+
             for (var i = num1 - 1; i > 1; i--)
             {
                 factorial *= i;
 
             }
-            return num1;
+            return factorial;
         }
 
         

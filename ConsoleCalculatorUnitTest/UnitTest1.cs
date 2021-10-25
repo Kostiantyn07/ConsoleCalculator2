@@ -58,7 +58,7 @@ namespace ConsoleCalculatorUnitTest
             double actualResult = Calc.Divide(firstArgument, secondArgument);
             Assert.AreEqual(expectedResult, actualResult);
         }
-        [TestCase(5, 120)]
+        [TestCase(8, 8)]
         [TestCase(-4, -24)]
         [TestCase(1, 1)]
         [TestCase(0, 1)]
@@ -68,8 +68,8 @@ namespace ConsoleCalculatorUnitTest
             Assert.AreEqual(expectedResult, actualResult);
         }
         [TestCase(5, 120)]
-        [TestCase(-4, -24)]
-        [TestCase(1, 1)]
+        [TestCase(4, 24)]
+        [TestCase(2, 2)]
         [TestCase(0, 1)]
         public void Factorial(double firstArgument, double expectedResult)
         {
@@ -77,10 +77,10 @@ namespace ConsoleCalculatorUnitTest
             Assert.AreEqual(expectedResult, actualResult);
         }
        
-        [TestCase(12, 2, 6)]
-        [TestCase(-10, 2, -5)]
-        [TestCase(4, 2, 2)]
-        [TestCase(0, 0, 0)]
+        [TestCase(2, 1, 2)]
+        [TestCase(8, 3, 512)]
+        [TestCase(3, 8, 6561)]
+        [TestCase(1, 10, 1)]
         public void Stepen(double firstArgument, double secondArgument, double expectedResult)
         {
             double actualResult = Calc.Stepen(firstArgument, secondArgument);
