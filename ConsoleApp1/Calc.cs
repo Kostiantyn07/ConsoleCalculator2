@@ -8,34 +8,59 @@ namespace ConsoleApp1
 {
     public static class Calc
     {
-        public static double Sum(double num1, double num2)
+        public static double Sum(double x, double y)
         {
-            return num1 + num2;
+            return x + y;
         }
-        public static double Substract(double num1, double num2)
+        public static double Substract(double x, double y)
         {
-            return num1 - num2;
+            return x - y;
         }
-        public static double Multiply(double num1, double num2)
+        public static double Multiply(double x, double y)
         {
-            return num1 * num2;
+            return x * y;
         }
-        public static double RestOfDivide(double num1, double num2)
+        public static double RestOfDivide(double x, double y)
         {
-            return num1 % num2;
+            return x % y;
         }
-        public static double Divide(double num1, double num2)
+        public static double Divide(double x, double y)
         {
-            while ( num2 == 0)
+            while (y == 0)
             {
                 Console.WriteLine("Can not divide by zero!");
                 return 0;
             }
-            return num1 / num2;
+            return x / y;
         }
-        public static double Sqrt(double num1)
+        public static double Factorial(double x)
         {
-            return Math.Sqrt(num1);
+            double factorial = x;
+
+            if (x == 0)
+            {
+                return 1;
+            }
+
+            for (var i = x - 1; i > 1; i--)
+            {
+                factorial *= i;
+
+            }
+            return factorial;
+        }
+
+        
+        public static double Sqrt(double x)
+        {
+            return Math.Sqrt(x);
+        }
+        public static double Stepen(double x, double y)
+        {
+            double temp = 1;
+            for (double i = 0; i < y; i++)
+                temp *= x;
+            return temp;
         }
 
         static public double NumInput()
@@ -55,7 +80,7 @@ namespace ConsoleApp1
         {
             mathOperator = Console.ReadLine();
             List<string> operatorsWithSecondArgument = new List<string> { "+", "-", "*", "/", "%", "^" };
-            List<string> operatorsWithOneArgument = new List<string> { "sqrt", "!" };
+            List<string> operatorsWithOneArgument = new List<string> { "sqrt", "!", "S"};
 
             while (true)
             {
