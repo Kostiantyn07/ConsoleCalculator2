@@ -18,6 +18,7 @@ namespace ConsoleApp1
             Console.WriteLine("Input operator (+ - * / %): ");
             bool isSecondNeed = Calc.OperatorInput(out string mathOperator);
             double secondOperand = 0;
+
             if (isSecondNeed = true)
             {
                 Console.WriteLine("Input second operand: ");
@@ -50,11 +51,25 @@ namespace ConsoleApp1
 
                     result = Calc.RestOfDivide(firstOperand, secondOperand);
                     break;
+                case "!":
 
+                    result = Calc.Factorial(firstOperand);
+                    break;
+
+                case "sqrt":
+
+                    result = Calc.Sqrt(firstOperand);
+                    break;
+                    
+                case "S":
+
+                    result = Calc.Stepen(firstOperand, secondOperand);
+                    break;
                 default:
                     Console.WriteLine("No such opertor");
                     break;
             }
+
             Console.WriteLine($"Yoyr result is: {result}");
         }
     }

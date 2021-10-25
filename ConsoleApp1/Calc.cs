@@ -12,18 +12,22 @@ namespace ConsoleApp1
         {
             return x + y;
         }
+
         public static double Substract(double x, double y)
         {
             return x - y;
         }
+
         public static double Multiply(double x, double y)
         {
             return x * y;
         }
+
         public static double RestOfDivide(double x, double y)
         {
             return x % y;
         }
+
         public static double Divide(double x, double y)
         {
             while (y == 0)
@@ -33,6 +37,7 @@ namespace ConsoleApp1
             }
             return x / y;
         }
+
         public static double Factorial(double x)
         {
             double factorial = x;
@@ -50,11 +55,11 @@ namespace ConsoleApp1
             return factorial;
         }
 
-        
         public static double Sqrt(double x)
         {
             return Math.Sqrt(x);
         }
+
         public static double Stepen(double x, double y)
         {
             double temp = 1;
