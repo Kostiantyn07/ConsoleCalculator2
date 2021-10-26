@@ -15,11 +15,11 @@ namespace ConsoleApp1
             double firstOperand = Calc.NumInput();
             Console.WriteLine();
 
-            Console.WriteLine("Input operator (+ - * / %): ");
+            Console.WriteLine("Input operator (+ - * / % sqrt S !): ");
             bool isSecondNeed = Calc.OperatorInput(out string mathOperator);
             double secondOperand = 0;
 
-            if (isSecondNeed = true)
+            if (isSecondNeed == true)
             {
                 Console.WriteLine("Input second operand: ");
                 secondOperand = Calc.NumInput();
