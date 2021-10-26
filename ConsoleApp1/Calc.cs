@@ -57,7 +57,22 @@ namespace ConsoleApp1
 
         public static double Sqrt(double x)
         {
-            return Math.Sqrt(x);
+            if (x == 0)
+            {
+                return 0;
+            }
+            double root = 1;
+            int i = 0;
+            while (true)
+            {
+                i = i + 1;
+                root = (x / root + root) / 2;
+                if (i == x + 1)
+                {
+                    break;
+                }
+            }
+            return Math.Round(root, 8);
         }
 
         public static double Stepen(double x, double y)
