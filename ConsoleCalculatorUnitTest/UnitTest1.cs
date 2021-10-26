@@ -59,8 +59,9 @@ namespace ConsoleCalculatorUnitTest
             Assert.AreEqual(expectedResult, actualResult);
         }
 
+        [TestCase(8, 2.82842712)]
         [TestCase(64, 8)]  
-        [TestCase(36, 6)]  
+        [TestCase(7, 2.64575131)]  
         [TestCase(1, 1)]
         [TestCase(256, 16)]
         public void RootTest(double firstArgument, double expectedResult)
@@ -88,5 +89,33 @@ namespace ConsoleCalculatorUnitTest
             double actualResult = Calc.Stepen(firstArgument, secondArgument);
             Assert.AreEqual(expectedResult, actualResult);
         }
+
+        [TestCase(4, 2, 2)]
+        [TestCase(16, 4, 4)]
+        public void PositiveDivisionCheck(double x, double y, double expResult)
+        {
+            double actual = Calc.Divide(x, y);
+            Assert.AreEqual(expResult, actual);
+        }
+
+        [TestCase(8, 0, 0)]
+        [TestCase(-48, -4, 12)]
+        [TestCase(4, -4, -1)]
+        public void NegativeDivisionCheck(double x, double y)
+        {
+            bool flag = false;
+            try
+            {
+                Calc.Divide(x, y);
+            }
+            catch (System.DivideByZeroException)
+            {
+                flag = true;
+            }
+            Assert.IsTrue(flag);
+
+            Assert.Throws<System.DivideByZeroException>(delegate { Calc.Divide(x, y); });
+        }
+
     }
 }
